@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://brtqy08koeek3"]
+
+[ext_resource type="Script" path="res://scripts/overview_menu.gd" id="1_4ub6o"]
+
+[node name="OverviewMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ub6o")
+
+[node name="BoardsList" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 331.0
+offset_bottom = -65.0
+grow_vertical = 2
+
+[node name="MakeNew" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 439.0
+grow_vertical = 0
+text = "New Board"
+
+[connection signal="pressed" from="MakeNew" to="." method="_on_make_new_pressed"]
